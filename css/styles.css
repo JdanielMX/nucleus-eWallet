@@ -50,11 +50,15 @@ img {
     display: block;
 }
 
-.contenedor {
-    max-width: 120rem;
+/*busca las clases que finalisen con __contenedor y aplica los estilos*/
+[class$="__contenedor"]{
+
+ max-width: 120rem;
     margin: 0 auto;
     width: 90%;
+
 }
+
 
 
 /* Header */
@@ -97,13 +101,7 @@ img {
     }
 }
 
-.header__contenedor {
 
-    max-width: 120rem;
-    margin: 0 auto;
-    width: 90%;
-
-}
 
 @media (min-width: 768px) {
 
@@ -129,38 +127,38 @@ img {
 
     }
 
-    .header__grid{
+    .header__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 4rem;
         align-items: center;
-       
+
     }
 }
 
-@media (min-width: 768px) { 
-    
-    .header__imagen{
+@media (min-width: 768px) {
+
+    .header__imagen {
 
         max-width: 30rem;
         margin: 0 auto;
     }
 }
 
-.header__boton{
-    
+.header__boton {
+
     display: block;
     background-color: var(--primario);
     color: var(--blanco);
     padding: 1rem;
     text-align: center;
     margin-bottom: 4rem;
- 
+
 }
 
-@media (min-width: 768px) { 
-    
-    .header__boton{
+@media (min-width: 768px) {
+
+    .header__boton {
 
         padding: 1rem 3rem;
         display: inline-block;
@@ -168,16 +166,16 @@ img {
 }
 
 
-.header__heading{
+.header__heading {
 
     text-align: center;
     font-size: 3rem;
 }
 
 
-@media (min-width: 768px) { 
-    
-    .header__heading{
+@media (min-width: 768px) {
+
+    .header__heading {
 
         text-align: left;
         font-size: 5rem;
@@ -205,13 +203,76 @@ img {
 
 .navegacion__link {
 
-    
+    color: var(--primario);
 }
 
-@media (min-width: 768px) { 
-    
-    .navegacion__link{
+@media (min-width: 768px) {
+
+    .navegacion__link {
 
         color: var(--blanco);
     }
 }
+
+
+/* Main */
+
+.nucleos {
+
+    margin-top: 3rem;
+}
+
+.nucleus__heading {
+
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.nucleus__grid{
+
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) { 
+    
+    .nucleus__grid{
+
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 5rem;
+        align-items: center;
+    }
+}
+
+
+.listado__elemento{
+
+    box-shadow: 0px 0px 15px 3px rgb(0 0 0 /.15);
+    padding: 2rem;
+    margin-bottom: 5rem;
+    transition-property: transform;
+    transition-duration: 300ms;
+}
+
+.listado__elemento:hover{
+
+    transform: scale(1.1);
+}
+
+.listado__heading{
+
+    font-size: 3rem;
+    color: var(--primario);
+    margin: 0;
+}
+
+.listad__texto{
+
+margin: 0;
+font-size: 2rem;
+}
+
+
+
+
